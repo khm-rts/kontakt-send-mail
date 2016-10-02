@@ -43,16 +43,14 @@
             //$headers	.= "Cc: birthdayarchive@example.com \r\n";
             //$headers	.= "Bcc: birthdaycheck@example.com \r\n";
             
-            // Send mail vha. funktionen mail() og hvis det lykkedes vises besked
-            if ( mail($modtager, $kontakt_emne, $kontakt_besked, $headers) )
-            {
-            	// Vis besked til bruger om at e-mailen er afsendt
-				//echo '<p>Tak for din henvendelse. Vi vil svare hurtigst muligt!</p>';
+            // Send mail vha. funktionen mail() og hvis det lykkedes vises besked om at e-mailen er afsendt
+			if ( mail($modtager, $kontakt_emne, $kontakt_besked, $headers) )
+			{
+				echo '<p>Tak for din henvendelse. Vi vil svare hurtigst muligt!</p>';
 			}
 			// Hvis ikke det lykkedes at sende e-mail, vises fejlbesked
 			else
 			{
-				// Vis besked til bruger om at e-mailen er afsendt
 				echo '<p>Din e-mail kunne ikke afsendes. Prøv venligst igen, eller kontakt os på anden vis!</p>';
 			}
         }
